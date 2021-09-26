@@ -1,4 +1,4 @@
-package Lab2.baithem;
+package com.phunguyen2004110042.tuan03;
 
 public class Cow {
     double weight;
@@ -15,4 +15,3 @@ public class Cow {
        color = cl;
     }
 }
-
