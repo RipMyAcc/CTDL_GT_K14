@@ -7,6 +7,13 @@ public class TaiKhoan {
     int  soDu;
     TaiKhoan(){
     }
+    TaiKhoan(String t){
+        ten = t;
+    }
+    TaiKhoan(String t, String stk){
+        ten = t;
+        soTK = stk;
+    }
     TaiKhoan(String t, String stk, int sd){
         ten = t;
         soTK = stk;
