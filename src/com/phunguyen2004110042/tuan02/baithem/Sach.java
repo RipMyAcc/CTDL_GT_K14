@@ -1,4 +1,4 @@
-package Lab2.baithem;
+package com.phunguyen2004110042.tuan02.baithem;
 
 public class Sach {
     int gia, giaBan, soLuong ;

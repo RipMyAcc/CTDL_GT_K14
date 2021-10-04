@@ -1,4 +1,4 @@
-package Lab2;
+package com.phunguyen2004110042.tuan02;
 
 import java.util.Scanner;
 
