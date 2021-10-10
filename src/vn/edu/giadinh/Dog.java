@@ -1,8 +1,8 @@
 package vn.edu.giadinh;
 
 public class Dog {
-    int size;
-    String name, color;
+    public int size;
+    public String name, color;
     public Dog(){
     }
     public Dog(int z, String n, String c){
@@ -10,7 +10,7 @@ public class Dog {
         size = z;
         color = c;
     }
-    void inthongtin(){
+    public void inthongtin(){
             System.out.println("Name: "+name +", Size: "+size + ", Color: "+color);
     }
 

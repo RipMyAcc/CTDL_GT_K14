@@ -12,7 +12,7 @@ public class Lab4bai1 {
             Double x = scanner.nextDouble(); 
             list.add(x);
             System.out.print("Nhập thêm (Y/N)? ");
-            if(scanner.nextLine().equals("N")){
+            if(scanner.next().equals("N")){
             break;
             }
         }

@@ -12,13 +12,13 @@ public class NhanVienTestDrive {
         for(int i=0; i<nhanvienlist.length;i++){
             System.out.println("Nhập nhân thứ "+(i+1));
             System.out.print("Tên:");
-            String ten=nhap.next();
+            String ten=nhap.nextLine();
             System.out.print("Địa chỉ:");
-            String diaChi=nhap.next();
+            String diaChi=nhap.nextLine();
             System.out.print("Bộ phận làm việc:");
-            String boPhanLamViec=nhap.next();
+            String boPhanLamViec=nhap.nextLine();
             System.out.print("Ngày sinh:");
-            String ngaySinh=nhap.next();
+            String ngaySinh=nhap.nextLine();
             System.out.print("Lương:");
             int luong=nhap.nextInt();
             nhanvienlist[i] = new NhanVIen(ten, diaChi, boPhanLamViec, ngaySinh, luong);

@@ -10,9 +10,9 @@ public class TaiKhoanTestDrive {
         for(int i=0; i<taikhoanlist.length;i++){
             System.out.println("Nhập tài khoản thứ "+(i+1));
             System.out.print("Tên:");
-            String ten=nhap.next();
+            String ten=nhap.nextLine();
             System.out.print("Số tài khoản:");
-            String soTK=nhap.next();
+            String soTK=nhap.nextLine();
             System.out.print("Số dư:");
             int soDu=nhap.nextInt();
             taikhoanlist[i] = new TaiKhoan(ten, soTK, soDu);

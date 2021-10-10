@@ -18,9 +18,9 @@ public class SachTestDrive {
             System.out.print("Năm xuất bản: ");
             int namXB=nhap.nextInt();
             System.out.print("Nhà xuất bản");
-            String nhaXB=nhap.next();
+            String nhaXB=nhap.nextLine();
             System.out.print("Loại: ");
-            String loai=nhap.next();
+            String loai=nhap.nextLine();
             sachlist[i]=new Sach(gia, giaBan, soLuong, namXB, nhaXB, loai);
         }
         System.out.println("====In danh sách sách sau khi nhập===");
@@ -41,9 +41,9 @@ public class SachTestDrive {
         System.out.print("Năm xuất bản: ");
         int namXB=nhap.nextInt();
         System.out.print("Nhà xuất bản");
-        String nhaXB=nhap.next();
+        String nhaXB=nhap.nextLine();
         System.out.print("Loại: ");
-        String loai=nhap.next();
+        String loai=nhap.nextLine();
         sachlist1[3]=new Sach(gia, giaBan, soLuong, namXB, nhaXB, loai);
         System.out.println("====In danh sách sách sau khi thêm===");
         for(Sach sach:sachlist1){

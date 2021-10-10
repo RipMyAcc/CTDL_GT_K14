@@ -10,13 +10,13 @@ public class MayTinhTestDrive {
         for(int i=0; i<maytinhlist.length;i++){
             System.out.println("Nhập máy tính thứ "+(i+1));
             System.out.print("Nhà sản xuất: ");
-            String nhaSX=nhap.next();
+            String nhaSX=nhap.nextLine();
             System.out.print("Hệ điều hành: ");
-            String HDH=nhap.next();
+            String HDH=nhap.nextLine();
             System.out.print("Ram: ");
-            String ram=nhap.next();
+            String ram=nhap.nextLine();
             System.out.print("CPU: ");
-            String CPU=nhap.next();
+            String CPU=nhap.nextLine();
             System.out.print("Năm sản xuất: ");
             int namSX=nhap.nextInt();
             System.out.print("Giá: ");
@@ -28,6 +28,7 @@ public class MayTinhTestDrive {
         System.out.println("====In danh sách máy tính sau khi nhập===");
         for(MayTinh maytinh:maytinhlist){
             maytinh.inthongtin();
+            System.out.println();
         }
     }
 }
