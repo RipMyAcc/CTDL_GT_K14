@@ -22,8 +22,8 @@ public class Lab4bai3TestDrive {
         switch(nhap){
             case 1: nhap(); break;
             case 2: sapxep(); break;
-            case 3: break;
-            case 4: break;
+            case 3: xoa(); break;
+            case 4: giatb(); break;
             case 5: System.exit(0);
         }
     }
@@ -50,7 +50,7 @@ public class Lab4bai3TestDrive {
         menu();
     }
     static public void xuat(){
-        System.out.println("====In danh sách sản phẩm sau khi nhập===");
+        System.out.println("====In danh sách sản phẩm===");
         for(Lab4bai3 sanpham:SanPham){
             sanpham.inthongtin();
             System.out.println();
@@ -64,6 +64,36 @@ public class Lab4bai3TestDrive {
             }
         });
         xuat();
+        scanner.nextLine();
+        scanner.nextLine();
+        menu();
+    }
+    static public void xoa(){
+        System.out.print("Nhập tên sản phẩm cần xoá: ");
+        scanner.nextLine();
+        String nhap = scanner.nextLine();
+        int i=0;
+        for(Lab4bai3 x:SanPham){
+            if(x.ten.equals(nhap)){
+                SanPham.remove(i);
+                break;
+            }
+            i++;
+        }
+        xuat();
+        scanner.nextLine();
+        menu();
+    }
+    static public void giatb(){
+        System.out.println("===Giá trung bình của tất cả sản phẩm===");
+        int i=0;
+        Double t=0.0;
+        for(Lab4bai3 x:SanPham){
+            t=t+x.gia-x.giamgia-x.thue;
+            i++;
+        }
+        System.out.println("Kết quả: "+t/i);
+        scanner.nextLine();
         scanner.nextLine();
         menu();
     }
