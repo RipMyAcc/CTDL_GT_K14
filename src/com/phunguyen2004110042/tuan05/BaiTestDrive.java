@@ -25,7 +25,7 @@ public class BaiTestDrive {
             case 3: xuattheodiem(); break;
             case 4: tim(); break;
             case 5: timsua(); break;
-            case 6: break;
+            case 6: timxoa(); break;
             case 7: System.exit(0);
         }
     }
@@ -87,8 +87,10 @@ public class BaiTestDrive {
     }
     static public void timsua(){
         System.out.println("====Tìm sinh viên và sửa sinh viên theo họ tên===");
+        scanner.nextLine();
         System.out.print("Nhập họ tên sinh viên: ");
         String nhap = scanner.nextLine();
+        int i=0;
         for(Bai x:svgd){
             if(x.ten.equals(nhap)){
                 x.inthongtin();
@@ -96,10 +98,28 @@ public class BaiTestDrive {
                 System.out.print("Tên:");
                 String ten = scanner.nextLine();
                 System.out.print("Điểm trung bình:");
-                Double diem = scanner.nextDouble(); 
+                Double diem = scanner.nextDouble();
                 x = new Bai(ten, diem);
+                svgd.set(i, x);
                 break;
-            }    
+            }
+            i++;    
+        }
+        scanner.next();
+        menu();
+    }
+    static public void timxoa(){
+        System.out.println("====Tìm sinh viên và xoá sinh viên theo họ tên===");
+        scanner.nextLine();
+        System.out.print("Nhập họ tên sinh viên: ");
+        String nhap = scanner.nextLine();
+        int i=0;
+        for(Bai x:svgd){
+            if(x.ten.equals(nhap)){
+                svgd.remove(i);
+                break;
+            }
+            i++;    
         }
         scanner.next();
         menu();
