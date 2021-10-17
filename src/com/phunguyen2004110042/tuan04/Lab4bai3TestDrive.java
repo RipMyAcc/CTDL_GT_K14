@@ -72,13 +72,16 @@ public class Lab4bai3TestDrive {
         System.out.print("Nhập tên sản phẩm cần xoá: ");
         scanner.nextLine();
         String nhap = scanner.nextLine();
-        int i=0;
+        boolean kq = false;
         for(Lab4bai3 x:SanPham){
             if(x.ten.equals(nhap)){
-                SanPham.remove(i);
+                SanPham.remove(x);
+                kq = true; 
                 break;
             }
-            i++;
+        }
+        if(kq==false){
+            System.out.println("Không tìm thấy");
         }
         xuat();
         scanner.nextLine();

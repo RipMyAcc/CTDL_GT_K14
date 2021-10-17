@@ -33,8 +33,8 @@ public class Lab4bai2 {
     }
     static public void nhap(){
         String x;
-        System.out.print("Nhập họ và tên: ");
         while(true){
+            System.out.print("Nhập họ và tên: ");
             x = scanner.nextLine(); 
             list.add(x);
             System.out.print("Nhập thêm (Y/N)? ");
@@ -43,6 +43,7 @@ public class Lab4bai2 {
             }
             scanner.nextLine();
         }
+        scanner.nextLine();
         memu();
     }
     static public void xuat(){
@@ -54,12 +55,14 @@ public class Lab4bai2 {
         memu();
     }
     static public void ngaunhien(){
+        System.out.println("Đã sắp xếp ngẫu nhiên");
         Collections.shuffle(list);
         xuat();
         scanner.nextLine();
         memu();
     }
     static public void sapxep(){
+        System.out.println("Đã sắp xếp");
         Collections.sort(list);
         Collections.reverse(list);
         xuat();
@@ -67,13 +70,18 @@ public class Lab4bai2 {
         memu();
     }
     static public void xoa(){
-        System.out.println("Nhập họ tên cần xoá");
+        System.out.print("Nhập họ tên cần xoá: ");
         String hoten = scanner.nextLine();
+        boolean result = false;
         for(String x: list){
             if(x.equals(hoten)){
+                result = true;
                 list.remove(x);
                 break;
             }
+        }
+        if(result==false){
+            System.out.println("Không tìm thấy");
         }
         xuat();
         scanner.nextLine();

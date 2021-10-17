@@ -1,9 +1,9 @@
 package com.phunguyen2004110042.tuan05;
 
-public class Bai {
+public class Baithem {
     String ten;
     Double diem;
-    Bai(String t, Double d){
+    Baithem(String t, Double d){
         ten = t;
         diem = d;
     }

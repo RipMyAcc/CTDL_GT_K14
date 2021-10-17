@@ -7,8 +7,8 @@ public class Lab4bai1 {
     public static void main(String[] args) {
         ArrayList<Double> list=new ArrayList();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập số: ");
         while(true){
+            System.out.print("Nhập số: ");
             Double x = scanner.nextDouble(); 
             list.add(x);
             System.out.print("Nhập thêm (Y/N)? ");
@@ -16,9 +16,12 @@ public class Lab4bai1 {
             break;
             }
         }
+        double tong=0;
         System.out.println("Các số vừa nhập là:");
         for(double x:list){
+            tong+=x;
             System.out.println(x);
         }
+        System.out.println("Tổng của nó là: "+ tong);
     }
 }

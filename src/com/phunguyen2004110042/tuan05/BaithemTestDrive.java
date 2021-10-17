@@ -3,11 +3,11 @@ package com.phunguyen2004110042.tuan05;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class BaiTestDrive {
+public class BaithemTestDrive {
     public static void main(String[] args) {
         menu();
 }
-    static ArrayList<Bai> svgd =new ArrayList();
+    static ArrayList<Baithem> svgd =new ArrayList();
     static Scanner scanner = new Scanner(System.in);
     static public void menu(){
         System.out.println("1.	Nhập danh sách sinh viên");
@@ -37,9 +37,9 @@ public class BaiTestDrive {
             String ten = scanner.nextLine();
             System.out.print("Điểm trung bình:");
             Double diem = scanner.nextDouble(); 
-            svgd.add(new Bai(ten, diem));
+            svgd.add(new Baithem(ten, diem));
             System.out.print("Nhập thêm (Y/N)? ");
-            if(scanner.next().equals("N")){
+            if(scanner.nextLine().equals("N")){
             break;
             }
         }
@@ -47,11 +47,11 @@ public class BaiTestDrive {
     }
     static public void xuat(){
         System.out.println("====In danh sách sinh viên sau khi nhập===");
-        for(Bai x:svgd){
+        for(Baithem x:svgd){
             x.inthongtin();
             System.out.println();
         }
-        scanner.next();
+        scanner.nextLine();
         menu();
     }
     static public void xuattheodiem(){
@@ -61,13 +61,13 @@ public class BaiTestDrive {
         System.out.print("Tới: ");
         double toi = scanner.nextDouble();
         System.out.println();
-        for(Bai x:svgd){
+        for(Baithem x:svgd){
             if(x.diem>=tu&x.diem<=toi){
                 x.inthongtin();
                 System.out.println();
             }
         }
-        scanner.next();
+        scanner.nextLine();
         menu();
     }
     static public void tim(){
@@ -75,14 +75,18 @@ public class BaiTestDrive {
         scanner.nextLine();
         System.out.print("Nhập họ tên sinh viên: ");
         String nhap = scanner.nextLine();
-        for(Bai x:svgd){
+        boolean kq = false;
+        for(Baithem x:svgd){
             if(x.ten.equals(nhap)){
                 x.inthongtin();
+                kq = true;
                 break;
-            }
-                            
+            }            
         }
-        scanner.next();
+        if(kq==false){
+            System.out.println("Không tìm thấy");
+        }
+        scanner.nextLine();
         menu();
     }
     static public void timsua(){
@@ -91,21 +95,26 @@ public class BaiTestDrive {
         System.out.print("Nhập họ tên sinh viên: ");
         String nhap = scanner.nextLine();
         int i=0;
-        for(Bai x:svgd){
+        boolean kq = false;
+        for(Baithem x:svgd){
             if(x.ten.equals(nhap)){
+                kq = true;
                 x.inthongtin();
                 System.out.println("===Sửa===");
                 System.out.print("Tên:");
                 String ten = scanner.nextLine();
                 System.out.print("Điểm trung bình:");
                 Double diem = scanner.nextDouble();
-                x = new Bai(ten, diem);
+                x = new Baithem(ten, diem);
                 svgd.set(i, x);
                 break;
             }
             i++;    
         }
-        scanner.next();
+        if(kq==false){
+            System.out.println("Không tìm thấy");
+        }
+        scanner.nextLine();
         menu();
     }
     static public void timxoa(){
@@ -113,15 +122,18 @@ public class BaiTestDrive {
         scanner.nextLine();
         System.out.print("Nhập họ tên sinh viên: ");
         String nhap = scanner.nextLine();
-        int i=0;
-        for(Bai x:svgd){
+        boolean kq = false;
+        for(Baithem x:svgd){
             if(x.ten.equals(nhap)){
-                svgd.remove(i);
+                kq = true;
+                svgd.remove(x);
                 break;
             }
-            i++;    
         }
-        scanner.next();
+        if(kq==false){
+            System.out.println("Không tìm thấy");
+        }
+        scanner.nextLine();
         menu();
     }
 }

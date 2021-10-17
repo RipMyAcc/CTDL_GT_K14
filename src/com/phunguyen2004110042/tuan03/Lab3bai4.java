@@ -14,8 +14,8 @@ public class Lab3bai4 {
         for(int i=0;i<n;i++)
         {
             System.out.printf("Sinh viên thứ %d: ",i+1);
+            scanner.nextLine();
             sinhvien[i]=scanner.nextLine();
-            scanner.next();
             System.out.print("Điểm: ");
             diem[i]=scanner.nextDouble();
         }
@@ -41,15 +41,16 @@ public class Lab3bai4 {
                 System.out.println("Xuất xắc");
             }
         }
-    
-        for(int i=0;i<n-1;i++){
-            if(diem[i]>diem[i+1]){
-                sd=diem[i];
-                diem[i]=diem[i+1];
-                diem[i+1]=sd;
-                ss=sinhvien[i];
-                sinhvien[i]=sinhvien[i+1];
-                sinhvien[i+1]=ss;
+        for(int j=0;j<n-1;j++){
+            for(int i=0;i<n-1;i++){
+                if(diem[i]>diem[i+1]){
+                    sd=diem[i];
+                    diem[i]=diem[i+1];
+                    diem[i+1]=sd;
+                    ss=sinhvien[i];
+                    sinhvien[i]=sinhvien[i+1];
+                    sinhvien[i+1]=ss;
+                }
             }
         }
         System.out.println("=====Sắp xếp=====");

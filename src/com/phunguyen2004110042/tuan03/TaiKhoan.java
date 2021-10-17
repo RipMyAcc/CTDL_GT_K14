@@ -1,7 +1,5 @@
 package com.phunguyen2004110042.tuan03;
 
-import java.net.Socket;
-
 public class TaiKhoan {
     String ten, soTK;
     int  soDu;

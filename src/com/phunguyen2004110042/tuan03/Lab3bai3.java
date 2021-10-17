@@ -29,13 +29,15 @@ public class Lab3bai3 {
             System.out.println();
         }
         int t=0;
+        int dem=0;
         for(int i=0;i<n;i++)
         {
             if(mang[i]% 3 == 0)
             {
                 t=t+mang[i];
+                dem++;
             }
         }
-        System.out.println("Trung bình cộng các phần tử chia hết cho 3: "+t);
+        System.out.println("Trung bình cộng các phần tử chia hết cho 3: "+t/dem);
     }
 }
