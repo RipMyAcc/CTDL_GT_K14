@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class BaithemTestDrive {
     public static void main(String[] args) {
         menu();
-}
+    }
     static ArrayList<Baithem> svgd =new ArrayList();
     static Scanner scanner = new Scanner(System.in);
     static public void menu(){

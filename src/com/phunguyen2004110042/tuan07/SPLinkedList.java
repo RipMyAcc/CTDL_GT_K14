@@ -6,6 +6,7 @@ public class SPLinkedList {
     NodeSP current=null;
     NodeSP temp=null;
     NodeSP temp2=null;
+    NodeSP temp3=null;
     public SPLinkedList(){}
     void add(double gia,String ten){
         NodeSP newNodeSP = new NodeSP(gia, ten);
@@ -74,7 +75,7 @@ public class SPLinkedList {
             temp.next=tail;
             tail.previous=temp;
         }
-        else if(current.next.next==tail){
+        else if(current.next.next!=null){
             temp=current.next;
             temp2=current;
             current=current.previous;
@@ -84,6 +85,9 @@ public class SPLinkedList {
             temp2.previous=temp;
             temp2.next=tail;
             tail.previous=temp2;
+        }
+        else {
+
         }
     }
     void print(){
