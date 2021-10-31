@@ -11,11 +11,11 @@ public class BinaryTreeTestDrive {
             bt.add(5);
             bt.add(7);
             bt.add(9);
-    
-            bt.containsNode(7);
-            assertTrue(bt.containsNode(6));
-    assertTrue(bt.containsNode(4));
- 
-    assertFalse(bt.containsNode(1));
+    bt.traverseInOrder(bt.root);
+    bt.delete(4);
+    System.out.println();
+    bt.traverseInOrder(bt.root);
+    System.out.println();
+    System.out.println(bt.containsNode(6));
     }
 }

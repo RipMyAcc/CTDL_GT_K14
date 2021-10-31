@@ -4,12 +4,22 @@ public class NodeSinhVien {
     double diem;
     String hoten;
     NodeSinhVien next;
+    NodeSinhVien left;
+    NodeSinhVien right;
     public NodeSinhVien(){
+    }
+    public NodeSinhVien(double d){
+        diem = d;
+        next=null;
+        right = null;
+        left = null;
     }
     public NodeSinhVien(double d, String t){
         diem = d;
         hoten = t;
         next=null;
+        right = null;
+        left = null;
     }
     public NodeSinhVien(double d, String t, NodeSinhVien n){
         diem = d;
