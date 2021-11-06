@@ -20,12 +20,15 @@ public class QuanLyMeoTestDrive {
             case "2": inThongTin(); break;
             default: {
                 System.out.println("Số nhập vào không hợp lệ");
-                System.out.println("Nhấn Enter để tiếp tục");
-                bienNhap.nextLine();
+                nhanEnterDeTiepTuc();
                 menu();
                 break;
             }
         }
+    }
+    static void nhanEnterDeTiepTuc(){
+        System.out.println("Nhấn Enter để tiếp tục");
+        bienNhap.nextLine();
     }
     static void themMeo(){
         while (true){
@@ -35,16 +38,14 @@ public class QuanLyMeoTestDrive {
                 break;
             }
         }
-        System.out.println("Nhấn Enter để tiếp tục");
-        bienNhap.nextLine();
+        nhanEnterDeTiepTuc();
         menu();
 
     }
     static void inThongTin(){
         qlmeo.inThongTin();
         bienNhap.nextLine();
-        System.out.println("Nhấn Enter để tiếp tục");
-        bienNhap.nextLine();
+        nhanEnterDeTiepTuc();
         menu();
     }
 }

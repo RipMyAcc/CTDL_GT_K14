@@ -25,17 +25,4 @@ public class Meo {
         System.out.println("Màu Sắc: "+mausac);
         System.out.println("Giới Tính: "+giong);
     }
-
-    public void nhapThongTin(){
-        Scanner bienNhap = new Scanner(System.in);
-        System.out.println("Nhập tên: ");
-        ten = bienNhap.nextLine();
-        System.out.println("Nhập Tuổi: ");
-        tuoi = bienNhap.nextInt();
-        System.out.println("Màu Sắc: ");
-        bienNhap.nextLine();
-        mausac = bienNhap.nextLine();
-        System.out.println("Giống: ");
-        giong = bienNhap.nextLine();
-    }
 }
