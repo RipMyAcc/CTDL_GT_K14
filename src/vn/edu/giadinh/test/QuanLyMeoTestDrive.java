@@ -14,6 +14,8 @@ public class QuanLyMeoTestDrive {
         System.out.println("2.  In danh sách");
         System.err.println("3.  Tìm mèo trong danh sách");
         System.out.println("4.  Thêm con mèo vào trước con mèo");
+        System.out.println("5.  Xoá con mèo");
+        System.out.println("6.  Sửa thông tin");
         System.out.print("Nhập số để thực hiện chức năng: ");
         String number = bienNhap.nextLine();
         switch(number){
@@ -21,6 +23,7 @@ public class QuanLyMeoTestDrive {
             case "2": inThongTin(); break;
             case "3": timMeo(); break;
             case "4": themMeoTruocMeo(); break;
+            case "5": xoaMeo(); break;
             default: {
                 System.out.println("Số nhập vào không hợp lệ");
                 nhanEnterDeTiepTuc();
@@ -47,7 +50,6 @@ public class QuanLyMeoTestDrive {
     }
     static void inThongTin(){
         qlmeo.inThongTin();
-        bienNhap.nextLine();
         nhanEnterDeTiepTuc();
         menu();
     }
@@ -64,5 +66,15 @@ public class QuanLyMeoTestDrive {
         qlmeo.timMeoRoiThemVaoDangTruoc(ten);
         nhanEnterDeTiepTuc();
         menu();
+    }
+    static void xoaMeo(){
+        System.out.println("Nhập tên con mèo để xoá:");
+        String ten = bienNhap.nextLine();
+        qlmeo.xoaMeo(ten);
+        nhanEnterDeTiepTuc();
+        menu();
+    }
+    static void sua(){
+        
     }
 }

@@ -71,10 +71,7 @@ public class QuanLyMeo {
                 addHead();
             }
             else{
-                timDangTruoc();
-                Meo meo = dienThongTin();
-                previous.next=meo;
-                previous.next.next=current;
+                themDangTruoc();
             }
         }
         else{
@@ -90,9 +87,58 @@ public class QuanLyMeo {
             previous=previous.next;
         }
     }
+    void themDangTruoc(){
+        timDangTruoc();
+        Meo meo = dienThongTin();
+        previous.next=meo;
+        previous.next.next=current;
+    }
     void addHead(){
         Meo meo = dienThongTin();
         meo.next=head;
         head=meo;
+    }
+    void xoaMeo(String ten){
+        if(true==tim(ten)){
+            if(current==head){
+                xoaHead();
+            }
+            else if (current==tail){
+                xoaTail();
+            }
+            else {
+                xoaGiua();
+            }
+        }
+        else{
+            System.out.println("Không tìm thấy");
+        }
+    }
+    void xoaHead(){
+        head=head.next;
+    }
+    void xoaTail(){
+        current = head;
+        while(current!=null){
+            if(current.next==tail){
+                tail=current;
+                tail.next=null;
+                return;
+            }
+            current=current.next;
+        }
+    }
+    void xoaGiua(){
+        timDangTruoc();
+        current=current.next;
+        previous.next=current;
+    }
+    void sua(String ten){
+        if(true==tim(ten)){
+            
+        }
+        else{
+            System.out.println("Không tìm thấy");
+        }
     }
 }
