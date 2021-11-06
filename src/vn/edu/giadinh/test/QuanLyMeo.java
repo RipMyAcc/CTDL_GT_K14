@@ -7,7 +7,7 @@ public class QuanLyMeo {
     Meo head;
     Meo tail;
     Meo current;
-    Meo next;
+    Meo previous;
     Scanner bienNhap = new Scanner(System.in);
     Meo dienThongTin(){
         System.out.println("Nhập tên: ");
@@ -44,5 +44,55 @@ public class QuanLyMeo {
             current.inThongTin();
             current=current.next;
         }
+    }
+    boolean tim(String ten){
+        current = head;
+        boolean result = false;
+        while(current!=null){
+            if(current.ten.equals(ten)){
+                result =true;
+                return result;
+            }
+            current=current.next;
+        }
+        return result;
+    }
+    void timXongInthongTin(String ten){
+        if(true==tim(ten)){
+            current.inThongTin();
+        }
+        else{
+            System.out.println("Không tìm thấy");
+        }
+    }
+    void timMeoRoiThemVaoDangTruoc(String ten){
+        if(true==tim(ten)){
+            if(current==head){
+                addHead();
+            }
+            else{
+                timDangTruoc();
+                Meo meo = dienThongTin();
+                previous.next=meo;
+                previous.next.next=current;
+            }
+        }
+        else{
+            System.out.println("Không tìm thấy");
+        }
+    }
+    void timDangTruoc(){
+        previous = head;
+        while(previous!=null){
+            if(previous.next==current){
+                return;
+            }
+            previous=previous.next;
+        }
+    }
+    void addHead(){
+        Meo meo = dienThongTin();
+        meo.next=head;
+        head=meo;
     }
 }
