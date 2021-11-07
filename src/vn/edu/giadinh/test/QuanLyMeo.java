@@ -135,7 +135,11 @@ public class QuanLyMeo {
     }
     void sua(String ten){
         if(true==tim(ten)){
-            
+            Meo meo = dienThongTin();
+            current.giong=meo.giong;
+            current.mausac=meo.mausac;
+            current.ten=meo.ten;
+            current.tuoi=meo.tuoi;
         }
         else{
             System.out.println("Không tìm thấy");

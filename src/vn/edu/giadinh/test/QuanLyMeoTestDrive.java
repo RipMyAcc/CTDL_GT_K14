@@ -24,6 +24,7 @@ public class QuanLyMeoTestDrive {
             case "3": timMeo(); break;
             case "4": themMeoTruocMeo(); break;
             case "5": xoaMeo(); break;
+            case "6": sua(); break;
             default: {
                 System.out.println("Số nhập vào không hợp lệ");
                 nhanEnterDeTiepTuc();
@@ -75,6 +76,10 @@ public class QuanLyMeoTestDrive {
         menu();
     }
     static void sua(){
-        
+        System.out.println("Nhập tên con mèo để sửa thông tin:");
+        String ten = bienNhap.nextLine();
+        qlmeo.sua(ten);
+        nhanEnterDeTiepTuc();
+        menu();
     }
 }
