@@ -15,13 +15,13 @@ public class KhoHangHoaTestDrive {
     }
     static void menu() throws ParseException {
         System.out.println("> > > > MENU < < < <");
-        System.out.println("1.  Xuất ra thông tin tất cả sản phẩm trong kho ");
-        System.out.println("2.  Thêm sản phẩm vào kho ");
-        System.err.println("3.  Xoá 1 sản phẩm trong kho");
-        System.out.println("4.  Sửa thông tin 1 sản phẩm trong kho");
-        System.out.println("5.  Tìm kiếm sản phẩm");
-        System.out.println("6.  Sắp xếp danh sách sản phẩm trong kho");
-        System.out.println("7.  Thống kê các sản phẩm trong kho");
+        System.out.println("1.  Xuất ra thông tin tất cả hàng hoá trong kho ");
+        System.out.println("2.  Thêm hàng hoá vào kho ");
+        System.err.println("3.  Xoá 1 hàng hoá trong kho");
+        System.out.println("4.  Sửa thông tin 1 hàng hoá trong kho");
+        System.out.println("5.  Tìm kiếm hàng hoá");
+        System.out.println("6.  Sắp xếp danh sách hàng hoá trong kho");
+        System.out.println("7.  Thống kê các hàng hoá trong kho");
         System.out.print("Nhập số: ");
         String number = kiTu.nextLine();
         switch(number){
@@ -147,11 +147,11 @@ public class KhoHangHoaTestDrive {
     }
 
     static void them() throws ParseException {
-        System.out.println("> > > Thêm sản phẩm vào kho < < <");
+        System.out.println("> > > Thêm hàng hoá vào kho < < <");
         while (true){
             khoHangHoa.them();
-            System.out.println("Đã thêm sản phẩm vào trong kho");
-            System.out.print("Thêm tiếp sản phẩm ? ( nhập N để thoát ): ");
+            System.out.println("Đã thêm hàng hoá vào trong kho");
+            System.out.print("Thêm tiếp hàng hoá ? ( nhập N để thoát ): ");
             if(kiTu.next().equals("N")){
                 break;
             }
