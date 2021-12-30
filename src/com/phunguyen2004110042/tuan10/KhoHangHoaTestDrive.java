@@ -15,7 +15,7 @@ public class KhoHangHoaTestDrive {
     }
     static void menu() throws ParseException {
         System.out.println("> > > > MENU < < < <");
-        System.out.println("1.  Xuất thông tin tất cả sản phẩm trong kho ");
+        System.out.println("1.  Xuất ra thông tin tất cả sản phẩm trong kho ");
         System.out.println("2.  Thêm sản phẩm vào kho ");
         System.err.println("3.  Xoá 1 sản phẩm trong kho");
         System.out.println("4.  Sửa thông tin 1 sản phẩm trong kho");
